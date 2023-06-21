@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="heading">
+            <h1>BioTool</h1>
+        </div>
+        <div class="container">
+            <div class="protein-block">
+                <button id="AA" onclick="call(this.value)" value="AA">Amino Acid Composition</button>
+                <button onclick="call(this.value)" value="molwt">Molecular Weight</button>
+                <button onclick="call2(this.value)" value="dotplot">Dot plot</button>
+                <button onclick="call2(this.value)" value="similarity">Similarity Identity</button>
+            </div>
+            <div class="dna-block">
+                <button onclick="call(this.value)" value="comp">DNA Composition</button>
+                <button onclick="call(this.value)" value="complementory">Complementory Strand</button>
+                <button onclick="call2(this.value)" value="alogn">Alignment Score</button>
+                <button onclick="call2(this.value)" value="doalign">Make Align</button>
+            </div>
+            <div class="result">
+                <h1 id="display"></h1>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <dialog id="favDialog">
+            <form method="dialog">
+                <button id="close" aria-label="close" formnovalidate>X</button>
+                <input type="text" placeholder="Enter sequence" id="seql">
+                <button id="confirm" type="submit">Confirm</button>
+                <button type="reset">Reset</button>
+            </form>
+        </dialog>
+    </div>
+    <dialog id="favDialog2">
+        <form method="dialog">
+            <button id="close" aria-label="close" formnovalidate>X</button>
+            <input type="text" placeholder="Enter sequence" id="sel">
+            <input type="text" placeholder="Enter sequence" id="sel2">
+            <button id="confirm2" type="submit">Confirm</button>
+            <button type="reset">Reset</button>
+        </form>
+    </dialog>
+
+    <div class="" id="outcome">
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
